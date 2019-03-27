@@ -1,0 +1,94 @@
+/* styles are currently just for rough idea of layouts */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: rgb(212, 250, 245);
+}
+.app-container{
+  width: 90%;
+  padding-left: 5%;
+  min-height: 50rem;
+  display: grid;
+}
+.food-grid, .day-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 5%;
+  grid-row-gap: 3%;
+}
+.food-card, .day-card{
+  text-align: center;
+  align-self: stretch;
+  padding-bottom: 50px;
+}
+
+.food-card img{
+  border: 2px solid rgb(218, 218, 218);
+  border-radius: 7px;
+  max-width: 80%;
+  max-height: 150px;
+}
+
+.food-card button, .day-card button{
+  margin: 10px;
+}
+
+form input{
+  display:block;
+}
+
+nav{
+  float: right;
+}
+nav h3,nav p{
+  display: inline;
+  padding-left: 25px;
+}
+a{
+  text-decoration: none;
+}
+nav a{
+  padding: 20px;
+  /* margin-left:25px; */
+  color: white;
+}
+a.active{
+  background: rgba(0, 0, 0, 0.514);
+}
+
+.title{
+  font-size: 2rem;
+}
+
+.page-buttons{
+  width: 100%;
+  text-align: center;
+}
+.page-buttons ul{
+  list-style: none;
+  padding: 0;
+}
+.page-buttons li {
+  display: inline;
+  padding: 25px;
+}
+.page-buttons a{
+  color: white;
+  background: rgba(68, 68, 68, 0.514); 
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 1.5rem;
+  border: 2px solid rgb(218, 218, 218);
+  border-radius: 5px;
+}
+
+.page-buttons a.active{
+  background: #3f51b5;
+}

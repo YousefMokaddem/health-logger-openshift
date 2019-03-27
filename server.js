@@ -39,9 +39,10 @@ app.use((err, req, res, next) => {
 });
 
 // set our port
-app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 5000);
 
+var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
+    ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 // start listening on our port
-const server = app.listen(app.get('port'), () => {
-  console.log(`Express server is listening on port ${server.address().port}`);
+app.listen(port, ip, () => {
+  console.log(`Express server is listening on port ${port}`);
 });
